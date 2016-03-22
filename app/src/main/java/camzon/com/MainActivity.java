@@ -24,7 +24,6 @@ import camzon.com.activity.SportFragment;
 import camzon.com.activity.TutorialFragment;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
-
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
     private FrameLayout frameLayout;
@@ -47,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         if (savedInstanceState == null){
             initScreen();
+        }else{
+            home = (HomeFragment) getSupportFragmentManager().getFragments().get(0);
         }
     }
 
